@@ -1,0 +1,64 @@
+body {
+    display: block;
+    margin: 0%;
+    font-family: sans-serif;
+  }
+
+  header{
+    display:flex;
+    flex-direction: row;
+    margin: 2%;
+  }
+
+  .hsLink{
+    display:flex;
+    width: 100%;
+  }
+  
+  .time{
+    display:flex;
+    justify-content: end;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    /* during quiz-> justify-content: left; */
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    color: rgb(180, 90, 184);
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: -35px;
+  }
+
+  .purpButton {
+    background-color: rgb(42, 4, 77);
+    color:white;
+    margin-bottom: 10%;
+    padding: 1%;
+    /* answer choices-> padding:10%; */
+    /* answer choices-> width:150%; */
+    border-radius: 5px;
+  }
+
+  .purpButton:hover {
+    background-color:rgb(180, 90, 184);
+    cursor: pointer;
+  }
+
+
+
+
+
