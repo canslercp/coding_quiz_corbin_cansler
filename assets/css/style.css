@@ -15,9 +15,10 @@ body {
     width: 100%;
   }
   
-  .time{
+  .timeText{
     display:flex;
     justify-content: end;
+    margin-right: 1%;
   }
 
   section {
