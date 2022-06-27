@@ -3,7 +3,7 @@ var startQuiz = document.querySelector(".purpButton");
 
 startQuiz.addEventListener("click", function(){
 
-// timer----doesnt work yet----------------------------------->
+// timer starts when the start quiz button is clicked------------------>
 var timeEl = document.querySelector(".time");
 
 var secondsLeft = 60;
@@ -25,6 +25,10 @@ function setTime() {
 }
 
 setTime();
+    //question one function
+    // function ques1(){
+        
+    // }
 
 });
 

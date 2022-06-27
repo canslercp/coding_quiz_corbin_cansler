@@ -21,7 +21,7 @@ body {
     margin-right: 1%;
   }
 
-  section {
+  .intro, .ques1 {
     display: flex;
     justify-content: center;
     /* during quiz-> justify-content: left; */
@@ -39,12 +39,16 @@ body {
     text-decoration: none;
   }
 
+  .ques1 {
+    display: none;
+  }
+
   ul {
     list-style-type: none;
     margin-left: -35px;
   }
 
-  .purpButton {
+  .purpButton, .ansA, .ansB, .ansC, .ansD {
     background-color: rgb(42, 4, 77);
     color:white;
     margin-bottom: 10%;
