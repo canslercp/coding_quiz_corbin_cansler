@@ -21,9 +21,18 @@ body {
     margin-right: 1%;
   }
 
-  .intro, .ques1 {
+  .intro {
     display: flex;
     justify-content: center;
+    /* during quiz-> justify-content: left; */
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .ques1, .ques2 {
+    display: none;
+    justify-content: left;
     /* during quiz-> justify-content: left; */
     flex-wrap: wrap;
     margin-left: 20%;
@@ -39,16 +48,17 @@ body {
     text-decoration: none;
   }
 
-  .ques1 {
-    display: none;
-  }
-
   ul {
     list-style-type: none;
     margin-left: -35px;
   }
 
-  .purpButton, .ansA, .ansB, .ansC, .ansD {
+  #ansA, #ansB, #ansC, #ansD {
+    padding:10%; 
+    width:150%; 
+  }
+
+  .purpButton {
     background-color: rgb(42, 4, 77);
     color:white;
     margin-bottom: 10%;
@@ -63,7 +73,14 @@ body {
     cursor: pointer;
   }
 
-
+  .correct, .incorrect {
+    display: none;
+    color: rgb(184, 184, 184);
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 10px;
+    border-top: 2px solid rgb(184, 184, 184) ;
+  }
 
 
 
