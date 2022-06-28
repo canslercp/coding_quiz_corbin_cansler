@@ -30,7 +30,7 @@ body {
     margin-right: 20%;
   }
 
-  .ques1, .ques2 {
+  .ques1, .ques2, .ques3, .ques4, .ques5, .endGame {
     display: none;
     justify-content: left;
     /* during quiz-> justify-content: left; */
