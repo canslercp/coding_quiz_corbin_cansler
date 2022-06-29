@@ -1,5 +1,5 @@
 //Click "start quiz" button to open quiz
-var startQuiz = document.querySelector(".purpButton");
+var startQuiz = document.querySelector("#startQuiz");
 
 startQuiz.addEventListener("click", function () {
 
@@ -14,11 +14,11 @@ startQuiz.addEventListener("click", function () {
       secondsLeft--;
       timeEl.textContent = secondsLeft;
 
-      if (secondsLeft === 0) {
+      if (secondsLeft <= 0) {
         // Stops execution of action at set interval
         clearInterval(timerInterval);
         // Calls function to create and append image
-        //-->sendMessage();
+        endGameFunc();
       }
 
     }, 1000);
@@ -34,6 +34,7 @@ startQuiz.addEventListener("click", function () {
   var ques3 = document.querySelector('.ques3');
   var ques4 = document.querySelector('.ques4');
   var ques5 = document.querySelector('.ques5');
+  var endGame = document.querySelector('.endGame');
 
   //question one function
   function ques1Func() {
@@ -64,6 +65,7 @@ startQuiz.addEventListener("click", function () {
 
         incorrect.setAttribute('style', 'display:flex');
         incorrectCounter++
+        secondsLeft = (secondsLeft - 10);
 
         setTimeout(() => {
           incorrect.style.display = 'none';
@@ -105,6 +107,7 @@ startQuiz.addEventListener("click", function () {
 
         incorrect.setAttribute('style', 'display:flex');
         incorrectCounter++
+        secondsLeft = (secondsLeft - 10);
 
         setTimeout(() => {
           incorrect.style.display = 'none';
@@ -145,6 +148,7 @@ startQuiz.addEventListener("click", function () {
 
         incorrect.setAttribute('style', 'display:flex');
         incorrectCounter++
+        secondsLeft = (secondsLeft - 10);
 
         setTimeout(() => {
           incorrect.style.display = 'none';
@@ -184,6 +188,7 @@ startQuiz.addEventListener("click", function () {
 
         incorrect.setAttribute('style', 'display:flex');
         incorrectCounter++
+        secondsLeft = (secondsLeft - 10);
 
         setTimeout(() => {
           incorrect.style.display = 'none';
@@ -215,7 +220,8 @@ startQuiz.addEventListener("click", function () {
           correct.style.display = 'none';
         }, 2000); 
 
-        endGameFunc();
+        //endGameFunc();
+        secondsLeft = 1
 
       //if incorrect answer is chosen
       }else{
@@ -223,21 +229,40 @@ startQuiz.addEventListener("click", function () {
 
         incorrect.setAttribute('style', 'display:flex');
         incorrectCounter++
+        secondsLeft = (secondsLeft - 10);
 
         setTimeout(() => {
           incorrect.style.display = 'none';
         }, 2000); 
 
-        endGameFunc();
+        //endGameFunc();
+        secondsLeft = 1
       }
 
     }
     )
   }
-});
+
 
 //This is the function for when the time runs out or all questions have been answered
 function endGameFunc () {
+  ques5.setAttribute('style', 'display:none');
+  endGame.setAttribute('style', 'display:block');
 
+//This code prints the player's score
+  correctCounter = (correctCounter * 5);
+  var score = document.createElement('div');
+  score.textContent = "  " + correctCounter;
+  document.getElementById('finalScore').appendChild(score);
+
+//code for submitting initials to save high score
+  var form = document.querySelector('#highScore');
+  
+  form.addEventListener('submit', (event) => {
+    // handle the form data
+    form.submit();
+    console.log(form);
+});
 }
 
+});

@@ -16,20 +16,21 @@
         <div class="time"></div>
     </header>
 
-   
+
     <!-- <section> -->
-        <!-- this is the main display tha introduces the quiz-->
-        <div class="intro">
+    <!-- this is the main display tha introduces the quiz-->
+    <div class="intro">
         <h1>Coding Quiz Challenge</h1>
         <p>
-            Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+            Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+            answers will penalize your score/time by ten seconds!
         </p>
 
-        <div class="purpButton">Start Quiz</div>
-        </div>
+        <div id="startQuiz" class="purpButton">Start Quiz</div>
+    </div>
 
-        <!-- Below is the code for question 1 -->
-        <div class="ques1">
+    <!-- Below is the code for question 1 -->
+    <div class="ques1">
         <h1>Commonly used data types DO NOT include:</h1>
 
         <ul>
@@ -39,71 +40,77 @@
             <li id="ansD" class="purpButton">4. numbers</li>
         </ul>
 
-        </div>
+    </div>
 
-        <!-- Below is the code for question 2 -->
-        <div class="ques2">
-            <h1>The condition in an if/ else statement is enclosed with ________.</h1>
-    
-            <ul>
-                <li id="ansA" class="purpButton">1. quotes</li>
-                <li id="ansB" class="purpButton">2. curly brackets</li>
-                <li id="ansC" class="purpButton">3. parenthesis</li>
-                <li id="ansD" class="purpButton">4. square brackets</li>
-            </ul>
-    
-        </div>
+    <!-- Below is the code for question 2 -->
+    <div class="ques2">
+        <h1>The condition in an if/ else statement is enclosed with ________.</h1>
 
-        <!-- Below is the code for question 3 -->
-        <div class="ques3">
-            <h1>Arrays in JavaScript can be used to store _______.</h1>
-    
-            <ul>
-                <li id="ansA" class="purpButton">1. numbers and strings</li>
-                <li id="ansB" class="purpButton">2. other arrays</li>
-                <li id="ansC" class="purpButton">3. booleans</li>
-                <li id="ansD" class="purpButton">4. all of the above</li>
-            </ul>
-    
-        </div>
-
-        <!-- Below is the code for question 4 -->
-        <div class="ques4">
-            <h1>A very useful tool used during development and debugging for printing content to the debugger is:</h1>
-    
-            <ul>
-                <li id="ansA" class="purpButton">1. JavaScript</li>
-                <li id="ansB" class="purpButton">2. terminal/bash</li>
-                <li id="ansC" class="purpButton">3. for loops</li>
-                <li id="ansD" class="purpButton">4. console.log</li>
-            </ul>
-    
-        </div>
-
-        <!-- Below is the code for question 5 -->
-        <div class="ques5">
-            <h1>String values must be enclosed within______ when being assigned to variables.</h1>
-    
-            <ul>
-                <li id="ansA" class="purpButton">1. commas</li>
-                <li id="ansB" class="purpButton">2. curly brackets</li>
-                <li id="ansC" class="purpButton">3. quotes</li>
-                <li id="ansD" class="purpButton">4. parenthesis</li>
-            </ul>
-    
-        </div>
-
-       <div class="correct">Correct!</div>
-       <div class="incorrect">Incorrect</div>
-
-       <!-- Below is the code for the game over page -->
-       <div class="endGame">
-        <h1>All done!</h1>
-        <p>Your final score is 22.</p>
-
-        <!-- insert form code here -->
+        <ul>
+            <li id="ansA" class="purpButton">1. quotes</li>
+            <li id="ansB" class="purpButton">2. curly brackets</li>
+            <li id="ansC" class="purpButton">3. parenthesis</li>
+            <li id="ansD" class="purpButton">4. square brackets</li>
+        </ul>
 
     </div>
+
+    <!-- Below is the code for question 3 -->
+    <div class="ques3">
+        <h1>Arrays in JavaScript can be used to store _______.</h1>
+
+        <ul>
+            <li id="ansA" class="purpButton">1. numbers and strings</li>
+            <li id="ansB" class="purpButton">2. other arrays</li>
+            <li id="ansC" class="purpButton">3. booleans</li>
+            <li id="ansD" class="purpButton">4. all of the above</li>
+        </ul>
+
+    </div>
+
+    <!-- Below is the code for question 4 -->
+    <div class="ques4">
+        <h1>A very useful tool used during development and debugging for printing content to the debugger is:</h1>
+
+        <ul>
+            <li id="ansA" class="purpButton">1. JavaScript</li>
+            <li id="ansB" class="purpButton">2. terminal/bash</li>
+            <li id="ansC" class="purpButton">3. for loops</li>
+            <li id="ansD" class="purpButton">4. console.log</li>
+        </ul>
+
+    </div>
+
+    <!-- Below is the code for question 5 -->
+    <div class="ques5">
+        <h1>String values must be enclosed within______ when being assigned to variables.</h1>
+
+        <ul>
+            <li id="ansA" class="purpButton">1. commas</li>
+            <li id="ansB" class="purpButton">2. curly brackets</li>
+            <li id="ansC" class="purpButton">3. quotes</li>
+            <li id="ansD" class="purpButton">4. parenthesis</li>
+        </ul>
+
+    </div>
+
+    <!-- Below is the code for the game over page -->
+    <div class="endGame">
+        <h1>All done!</h1>
+        <div id="finalScore">
+        <p class="finalScore">Your final score is </p>
+        </div>
+        <form id="highScore">
+            <label for="initials">Enter initials:</label>
+            <input type="text" id="initials" name="initials">
+            <input type="submit" value="Submit" class="purpButton">
+        </form>
+    </div>
+
+    <!-- correct or incorrect display -->
+    <div class="correct">Correct!</div>
+    <div class="incorrect">Incorrect</div>
+
     <!-- </section> -->
     <script src="./assets/js/script.js"></script>
 </body>

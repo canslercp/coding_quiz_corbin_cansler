@@ -39,8 +39,33 @@ body {
     margin-right: 20%;
   }
 
+   /* .endGame{
+    display: none;
+    /* justify-content: left; 
+    /* flex-direction: column; 
+    /* during quiz-> justify-content: left; 
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: 20%;
+   */ 
+
+  form{
+    display: inline;
+  }
+
   p {
     text-align: center;
+  }
+
+  .finalScore{
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  #finalScore{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   a {
@@ -66,6 +91,7 @@ body {
     /* answer choices-> padding:10%; */
     /* answer choices-> width:150%; */
     border-radius: 5px;
+    border: none;
   }
 
   .purpButton:hover {
