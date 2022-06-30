@@ -30,7 +30,7 @@ body {
     margin-right: 20%;
   }
 
-  .ques1, .ques2, .ques3, .ques4, .ques5, .endGame {
+  .ques1, .ques2, .ques3, .ques4, .ques5, .endGame, .hsPage {
     display: none;
     justify-content: left;
     /* during quiz-> justify-content: left; */
@@ -39,6 +39,38 @@ body {
     margin-right: 20%;
   }
 
+  .hsPage {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .hsButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+
+  #backBtn{
+    margin-right: 1%;
+    list-style-type: decimal ;
+  }
+
+  #initialScore{
+    background-color: rgb(162, 148, 206);
+  }
+
+  li{
+    background-color: rgb(162, 148, 206);
+    margin-bottom: 5%;
+    padding:2px
+  }
    /* .endGame{
     display: none;
     /* justify-content: left; 

@@ -47,7 +47,7 @@ startQuiz.addEventListener("click", function () {
     ques1.addEventListener("click", function (event) {
       var answer = event.target;
       //if correct answer is chosen
-      if (answer.matches('#ansC')){
+      if (answer.matches('#ansC')) {
         var correct = document.querySelector(".correct");
 
         correct.setAttribute('style', 'display:flex');
@@ -55,12 +55,12 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           correct.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques2Func();
 
-      //if incorrect answer is chosen
-      }else{
+        //if incorrect answer is chosen
+      } else {
         var incorrect = document.querySelector(".incorrect");
 
         incorrect.setAttribute('style', 'display:flex');
@@ -69,7 +69,7 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           incorrect.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques2Func();
       }
@@ -89,7 +89,7 @@ startQuiz.addEventListener("click", function () {
     ques2.addEventListener("click", function (event) {
       var answer = event.target;
       //if correct answer is chosen
-      if (answer.matches('#ansC')){
+      if (answer.matches('#ansC')) {
         var correct = document.querySelector(".correct");
 
         correct.setAttribute('style', 'display:flex');
@@ -97,12 +97,12 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           correct.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques3Func();
 
-      //if incorrect answer is chosen
-      }else{
+        //if incorrect answer is chosen
+      } else {
         var incorrect = document.querySelector(".incorrect");
 
         incorrect.setAttribute('style', 'display:flex');
@@ -111,7 +111,7 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           incorrect.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques3Func();
       }
@@ -119,7 +119,7 @@ startQuiz.addEventListener("click", function () {
     }
     )
   }
-  
+
   //question three function
   function ques3Func() {
 
@@ -130,7 +130,7 @@ startQuiz.addEventListener("click", function () {
     ques3.addEventListener("click", function (event) {
       var answer = event.target;
       //if correct answer is chosen
-      if (answer.matches('#ansD')){
+      if (answer.matches('#ansD')) {
         var correct = document.querySelector(".correct");
 
         correct.setAttribute('style', 'display:flex');
@@ -138,12 +138,12 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           correct.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques4Func();
 
-      //if incorrect answer is chosen
-      }else{
+        //if incorrect answer is chosen
+      } else {
         var incorrect = document.querySelector(".incorrect");
 
         incorrect.setAttribute('style', 'display:flex');
@@ -152,16 +152,15 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           incorrect.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques4Func();
       }
-
     }
     )
   }
-   //question four function
-   function ques4Func() {
+  //question four function
+  function ques4Func() {
 
     ques4.setAttribute('style', 'display:flex');
     ques3.setAttribute('style', 'display:none');
@@ -170,7 +169,7 @@ startQuiz.addEventListener("click", function () {
     ques4.addEventListener("click", function (event) {
       var answer = event.target;
       //if correct answer is chosen
-      if (answer.matches('#ansD')){
+      if (answer.matches('#ansD')) {
         var correct = document.querySelector(".correct");
 
         correct.setAttribute('style', 'display:flex');
@@ -178,12 +177,12 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           correct.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques5Func();
 
-      //if incorrect answer is chosen
-      }else{
+        //if incorrect answer is chosen
+      } else {
         var incorrect = document.querySelector(".incorrect");
 
         incorrect.setAttribute('style', 'display:flex');
@@ -192,11 +191,10 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           incorrect.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         ques5Func();
       }
-
     }
     )
   }
@@ -210,7 +208,7 @@ startQuiz.addEventListener("click", function () {
     ques5.addEventListener("click", function (event) {
       var answer = event.target;
       //if correct answer is chosen
-      if (answer.matches('#ansA')){
+      if (answer.matches('#ansA')) {
         var correct = document.querySelector(".correct");
 
         correct.setAttribute('style', 'display:flex');
@@ -218,13 +216,13 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           correct.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         //endGameFunc();
         secondsLeft = 1
 
-      //if incorrect answer is chosen
-      }else{
+        //if incorrect answer is chosen
+      } else {
         var incorrect = document.querySelector(".incorrect");
 
         incorrect.setAttribute('style', 'display:flex');
@@ -233,36 +231,48 @@ startQuiz.addEventListener("click", function () {
 
         setTimeout(() => {
           incorrect.style.display = 'none';
-        }, 2000); 
+        }, 2000);
 
         //endGameFunc();
         secondsLeft = 1
       }
-
     }
     )
   }
 
+  //This is the function for when the time runs out or all questions have been answered
+  function endGameFunc() {
+    ques5.setAttribute('style', 'display:none');
+    endGame.setAttribute('style', 'display:block');
 
-//This is the function for when the time runs out or all questions have been answered
-function endGameFunc () {
-  ques5.setAttribute('style', 'display:none');
-  endGame.setAttribute('style', 'display:block');
+    //This code prints the player's score
+    correctCounter = (correctCounter * 5);
+    var score = document.createElement('div');
+    score.textContent = "  " + correctCounter;
+    document.getElementById('finalScore').appendChild(score);
 
-//This code prints the player's score
-  correctCounter = (correctCounter * 5);
-  var score = document.createElement('div');
-  score.textContent = "  " + correctCounter;
-  document.getElementById('finalScore').appendChild(score);
+    //code for submitting initials to save high score---------------------------
+    var form = document.querySelector('#highScore');
 
-//code for submitting initials to save high score
-  var form = document.querySelector('#highScore');
-  
-  form.addEventListener('submit', (event) => {
-    // handle the form data
-    form.submit();
-    console.log(form);
-});
-}
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
+      var initials = document.querySelector('#initials').value;
+      //saves highscore and initials on local storagge
+      localStorage.setItem("score", correctCounter);
+      localStorage.setItem("initials", initials);
+
+      //this function shows the player's initials and high score on the high score page
+      function renderInitialsScore() {
+        location.href = "./highscores.html";
+        var score = localStorage.getItem("score");
+        var initials = localStorage.getItem("initials");
+
+        var highScore = document.createElement('li');
+        highScore.textContent = initials + ' - ' + score;
+        document.getElementById('initialsScore').appendChild(highScore);
+      }
+      renderInitialsScore();
+    });
+  }
 });
