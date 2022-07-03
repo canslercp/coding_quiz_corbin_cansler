@@ -256,23 +256,40 @@ startQuiz.addEventListener("click", function () {
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-
       var initials = document.querySelector('#initials').value;
-      //saves highscore and initials on local storagge
-      localStorage.setItem("score", correctCounter);
-      localStorage.setItem("initials", initials);
 
-      //this function shows the player's initials and high score on the high score page
-      function renderInitialsScore() {
-        location.href = "./highscores.html";
-        var score = localStorage.getItem("score");
-        var initials = localStorage.getItem("initials");
+      var highScore = {initials:initials, score:correctCounter}
 
-        var highScore = document.createElement('li');
-        highScore.textContent = initials + ' - ' + score;
-        document.getElementById('initialsScore').appendChild(highScore);
-      }
-      renderInitialsScore();
+      var scores = JSON.parse(localStorage.getItem("score") || "[]");     
+    
+      scores.push(highScore);
+// add current data to storage array
+      console.log(scores);
+      scores.sort((a, b) => (a.score - b.score)).reverse();
+      if (scores.length > 5) {
+        scores.pop()
+    }
+     
+      window.localStorage.setItem("score", JSON.stringify(scores));
+
+      location.href = "./highscores.html";
+      
+    //   var initials = document.querySelector('#initials').value;
+    //   //saves highscore and initials on local storagge
+    //   localStorage.setItem("score", correctCounter);
+    //   localStorage.setItem("initials", initials);
+
+    //   //this function shows the player's initials and high score on the high score page
+    //   function renderInitialsScore() {
+    //     location.href = "./highscores.html";
+    //     var score = localStorage.getItem("score");
+    //     var initials = localStorage.getItem("initials");
+
+    //     var highScore = document.createElement('li');
+    //     highScore.textContent = initials + ' - ' + score;
+    //     document.getElementById('initialsScore').appendChild(highScore);
+    //   }
+    //   renderInitialsScore();
     });
   }
 });

@@ -62,8 +62,9 @@ body {
     list-style-type: decimal ;
   }
 
-  #initialScore{
+  #placeholder{
     background-color: rgb(162, 148, 206);
+    margin-bottom: 5%;
   }
 
   li{
