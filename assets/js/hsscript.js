@@ -4,5 +4,6 @@ console.log(highScoresData,'high scores data');
 var placeholder = document.querySelector('#placeholder');
 // placeholder.textContent = highScoresData.map
 
-var map1 = highScoresData.map(x => placeholder.textContent = x);
-  
+// var map1 = highScoresData.map(x => placeholder.textContent = x);
+var map1 = highScoresData.map(x=>'${x.initials}','${x.score}')  
+placeholder.textContent = map1
